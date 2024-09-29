@@ -1,0 +1,25 @@
+.si{
+    border-style: solid;
+    height: 300px;
+    width:500px;
+    margin: auto;
+    text-align: center;
+}
+.e{
+    background-color: red;
+    color: white;
+}
+.s{
+    background-color:green;
+    color: white;
+}
+
+#pa{
+    text-align: right;
+}
+#t{
+    text-align: right;
+}
+#roi{
+    text-align: right;
+}

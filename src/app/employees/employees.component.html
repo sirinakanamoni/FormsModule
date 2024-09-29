@@ -1,0 +1,52 @@
+<form class="form" >
+   <marquee direction="left"><h1 >Employee Details</h1></marquee>
+    <div>
+        <label>Employee Name:</label>
+        <input type="text" id="en" placeholder="Employee Name" [(ngModel)]="employeeName"[ngModelOptions]="{standalone:true}">{{employeeName | uppercase}}
+    </div>
+    <br>
+    <div>
+       <label>DOB</label>
+       <input type="date" id="d" placeholder="Enter DOB" [(ngModel)]="dob"[ngModelOptions]="{standalone:true}">{{dob | date:'dd-MM-yyyy'}}
+    </div>
+    <br>
+    <div>
+        <label>Email:</label>
+        <input type="text" id="e" placeholder="Enter Email" [(ngModel)]="email"[ngModelOptions]="{standalone:true}">{{email | uppercase}}
+    </div>
+    <br>
+    <div>
+        <label>Mobile</label>
+        <input type="number" id="m" placeholder="Enter Mobile"[(ngModel)]="mobile"[ngModelOptions]="{standalone:true}">{{mobile | number}}
+    </div>
+    <br>
+    <div>
+        <label>Gender</label>
+        <input type="radio" name="gender" [(ngModel)]="gender" value="male"[ngModelOptions]="{standalone:true}">Male
+        <input type="radio" name="gender" [(ngModel)]="gender" value="female"[ngModelOptions]="{standalone:true}">Female
+        <input type="radio" name="gender" [(ngModel)]="gender"value="others" [ngModelOptions]="{standalone:true}">Other
+        <h2>Selected Gender:{{countryForm.get('gender')?.value}}</h2>
+    </div>
+    <br>
+    <div>
+        <label>Country</label>
+        <select (change)="changeCountry($event)"  [(ngModel)]="country" [ngModelOptions]="{standalone:true}"> 
+            <option value="">--Select--</option>
+            <option value="IND">India</option>
+            <option value="USA">America</option>
+            <option value="UK">England</option>
+        </select>
+    </div>
+    <br>
+    <div>
+      <label>Check If You Agree With Terms And Conditions</label>
+      <input type="checkbox">
+    </div>
+    <br>
+    <button (click)="Done()">Done</button>
+    <button (click)="Clear()">Clear</button>
+    <button (click)="bind()">Bind</button>
+    <button (click)="Navigate()">Navigate</button>
+    <button (click)="FControl()">FControl</button>
+    <button (click)="FBuilder()">FBuilder</button>
+    </form>

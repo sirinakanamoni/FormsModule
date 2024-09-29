@@ -1,0 +1,34 @@
+<form [formGroup]="simpleInt" class="si">
+    <h1>Calculate Simple Interest</h1>
+    <div>
+        <label>Principal Amount:</label>
+        <input type="number" (input)="ChangePa()"id="pa" placeholder="Principal Amount" formControlName="principalAmount">{{principalAmount | number:'1.2-2'}}
+    </div>
+    <br>
+    <div>
+        <label>Time:</label>
+        <input type="number" (input)="ChangeTime()" id="t" placeholder="Enter Time" formControlName="time" >{{time}}
+    </div>
+    <br>
+    <div>
+        <label>Rate Of Interest:</label>
+        <input type="number" (input)="ChangeRoi()" id="roi"placeholder="Rate Of Interest" formControlName="rateOfInterest">{{rateOfInterest}}
+    </div>
+    <br>
+    <div>
+        <!-- <label>Total</label>
+        <input type="number" formControlName="total" >{{total}} -->
+        {{total | number:'1.2-2'}}
+    </div>
+    <br>
+    <div class="e">
+        {{errorMsg}}
+    </div>
+    <div class="s">
+        {{successMsg}}
+    </div>
+    <br>
+    <button (click)="Calculate()">Calculate</button>
+    <button (click)="Clear()">Clear</button>
+
+</form>

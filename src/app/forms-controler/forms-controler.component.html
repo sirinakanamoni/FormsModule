@@ -1,0 +1,41 @@
+<form [formGroup]="empForm" class="form">
+    <h1>FormController</h1>
+    <div>
+        <label>Employee Name:</label>
+        <input type="text" id="en" placeholder="Employee Name" formControlName="employeeName">
+    </div>
+    <br>
+    <div>
+       <label>DOB</label>
+       <input type="date" id="d" placeholder="Enter DOB" formControlName="dob">
+    </div>
+    <br>
+    <div>
+        <label>Email:</label>
+        <input type="text" id="e" placeholder="Enter Email" formControlName="email">
+    </div>
+    <br>
+    <div>
+        <label>Mobile</label>
+        <input type="number" id="m" placeholder="Enter Mobile" formControlName="mobile">
+    </div>
+    <br>
+    <div>
+        <label>Gender</label>
+        <input type="radio" name="gender"  value="male" formControlName="gender">Male
+        <input type="radio" name="gender"  value="female" formControlName="gender">Female
+        <input type="radio" name="gender"  value="others" formControlName="gender">Other
+    </div>
+    <br>
+    <div>
+        <label>Country</label>
+        <select  formControlName="country" > 
+            <option value="">--Select--</option>
+            <option >India</option>
+            <option >America</option>
+            <option >England</option>
+        </select>
+    </div>
+    <br>
+    <button (click)="Done()">Done</button>
+</form>
